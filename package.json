@@ -28,6 +28,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^1.9.4",
     "prop-types": "^15.5.10"
   }
 }

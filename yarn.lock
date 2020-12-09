@@ -46,6 +46,11 @@
   dependencies:
     cross-spawn "^5.1.0"
 
+"@react-native-picker/picker@^1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-1.9.4.tgz#f4392b58eab320061c71f5c9ab6f74dc3501ec9e"
+  integrity sha512-71sNPRZf/PeMKpLMuzKHLT4p4zRilWnfv61nko9HMZtjW0R0DNy2zLy6PYokTbtbUqhwCdeEIldQcjFSoNR8rg==
+
 "@segment/loosely-validate-event@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@segment/loosely-validate-event/-/loosely-validate-event-1.1.2.tgz#d77840999e3f7e43e74b3b0d43391c1526f793b8"
