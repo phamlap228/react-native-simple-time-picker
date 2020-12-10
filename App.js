@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   View,
+  Text,
   StyleSheet,
 } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   picker: {
     flex: 1,
@@ -48,7 +51,7 @@ export default class TimePicker extends Component {
     const { hoursUnit } = this.props;
     for (let i = 0; i <= MAX_HOURS; i++) {
       items.push(
-        <Picker.Item key={i} value={i} label={`${i.toString()}${hoursUnit}`} />,
+        <Picker.Item key={i} value={i} label={`${i < 10 ? 0 + i.toString() : i.toString()}${hoursUnit}`} />,
       );
     }
     return items;
@@ -59,7 +62,7 @@ export default class TimePicker extends Component {
     const { minutesUnit } = this.props;
     for (let i = 0; i <= MAX_MINUTES; i++) {
       items.push(
-        <Picker.Item key={i} value={i} label={`${i.toString()}${minutesUnit}`} />,
+        <Picker.Item key={i} value={i} label={`${i < 10 ? 0 + i.toString() : i.toString()}${minutesUnit}`} />,
       );
     }
     return items;
@@ -96,6 +99,7 @@ export default class TimePicker extends Component {
         >
           {this.getHoursItems()}
         </Picker>
+        <Text> : </Text>
         <Picker
           style={styles.picker}
           selectedValue={selectedMinutes}
